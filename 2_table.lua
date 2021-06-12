@@ -12,6 +12,7 @@ print('another way ref to string-key table ele: '.. table.a)
 table[5] = 'real-int key'
 table['5'] = 'int-string key'
 print('int,string key: '..table[5]..table['5'])
+
 --constructor 
 --key default to string
 tb = {
@@ -27,3 +28,8 @@ tb1 = {
     [3] = 'c',
 }
 print('tb = {' .. tb1.a .. tb1.b .. tb1[3] .. '}')
+--set all it's ref var to nil once not needed
+--to release the memory tb and tb2 ref
+tb2 = tb --for demo
+tb = nil 
+tb2 = nil
